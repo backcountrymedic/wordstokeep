@@ -1,0 +1,263 @@
+/* Cairn: Words to Keep. Colors follow CairnKit/DesignSystem.swift. */
+
+:root {
+  color-scheme: light dark;
+
+  --cream: #F4E6D6;
+  --sand: #E6DDD0;
+  --text: #2C2A27;
+  --text-secondary: #5F5A54;
+  --text-tertiary: #9A948C;
+  --accent: #8A6F3E;
+  --divider: #DDD8D0;
+  --surface: rgba(255, 255, 255, 0.35);
+
+  --slate: #6E7273;
+  --granite: #8C8780;
+  --sandstone: #A8694E;
+  --river: #B3ACA1;
+
+  --serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream: #27221D;
+    --sand: #1D1A17;
+    --text: #EAE7E1;
+    --text-secondary: #A7A199;
+    --text-tertiary: #6F6A64;
+    --accent: #D8BE86;
+    --divider: #33302C;
+    --surface: rgba(255, 255, 255, 0.04);
+
+    --slate: #8C9192;
+    --granite: #A29D95;
+    --sandstone: #C98E72;
+    --river: #BDB6AB;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--sand);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--sand) 100%) fixed;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  animation: fade-in 0.9s ease-in-out both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none; }
+}
+
+main {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 3rem;
+}
+
+h1,
+h2,
+.subtitle {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.375rem;
+  margin: 3rem 0 0.75rem;
+}
+
+p {
+  margin: 0 0 1.25rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: opacity 0.4s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--text-secondary);
+}
+
+/* The cairn mark */
+
+.mark {
+  display: block;
+  width: 4.5rem;
+  height: auto;
+  margin: 0 0 2.5rem;
+}
+
+.mark .slate { fill: var(--slate); }
+.mark .granite { fill: var(--granite); }
+.mark .sandstone { fill: var(--sandstone); }
+.mark .river { fill: var(--river); }
+
+a.home-link {
+  display: inline-block;
+}
+
+a.home-link:hover {
+  opacity: 0.8;
+}
+
+/* Home */
+
+.home main {
+  padding-top: 7rem;
+  text-align: center;
+}
+
+.home .mark {
+  width: 7rem;
+  margin: 0 auto 3rem;
+}
+
+.home h1 {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 1.375rem;
+  color: var(--text-secondary);
+  margin: 0 0 4rem;
+}
+
+.lede {
+  font-family: var(--serif);
+  font-size: 1.3125rem;
+  line-height: 1.6;
+  margin: 0 auto 3.5rem;
+  max-width: 30rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 4rem;
+  max-width: 30rem;
+  text-align: left;
+}
+
+.features li {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--divider);
+}
+
+.features li:last-child {
+  border-bottom: 1px solid var(--divider);
+}
+
+.features strong {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.1875rem;
+  margin-bottom: 0.25rem;
+}
+
+.features span {
+  color: var(--text-secondary);
+}
+
+.store {
+  margin: 0 0 1rem;
+}
+
+.coming-soon {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--divider);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+}
+
+.store img {
+  height: 3.25rem;
+  width: auto;
+}
+
+/* Policy and support pages */
+
+.doc h1 {
+  margin-bottom: 0.25rem;
+}
+
+.doc .updated {
+  color: var(--text-tertiary);
+  font-size: 0.9375rem;
+  margin-bottom: 2.5rem;
+}
+
+.doc .question {
+  margin-bottom: 0.25rem;
+}
+
+/* Footer */
+
+footer {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+footer nav a {
+  color: var(--text-secondary);
+  margin: 0 0.75rem;
+}
+
+footer p {
+  margin: 1rem 0 0;
+}
+
+@media (max-width: 480px) {
+  main { padding-top: 3.5rem; }
+  .home main { padding-top: 4.5rem; }
+  h1 { font-size: 2.125rem; }
+  .home h1 { font-size: 2.5rem; }
+  .lede { font-size: 1.1875rem; }
+}
