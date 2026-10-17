@@ -261,3 +261,69 @@ footer p {
   .home h1 { font-size: 2.5rem; }
   .lede { font-size: 1.1875rem; }
 }
+
+/* A shared quote (q.html) */
+
+.shared main {
+  text-align: center;
+}
+
+.shared .mark {
+  width: 4rem;
+  margin: 0 auto 3rem;
+}
+
+.from {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+}
+
+.shared-quote {
+  margin: 0 auto 4rem;
+  max-width: 32rem;
+}
+
+.shared-quote blockquote {
+  margin: 0;
+}
+
+.shared-quote blockquote p {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  line-height: 1.4;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  margin: 0 0 1.25rem;
+}
+
+.shared-quote figcaption {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.shared-quote figcaption::before {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.5px;
+  background: var(--accent);
+  vertical-align: middle;
+  margin-right: 0.6rem;
+}
+
+.get-cairn {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid var(--divider);
+}
+
+.get-cairn h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 480px) {
+  .shared-quote blockquote p { font-size: 1.4375rem; }
+}

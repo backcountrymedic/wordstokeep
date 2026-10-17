@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["VS7T28SJBS.com.jaredapperson.cairn"],
+        "components": [
+          { "/": "/q", "comment": "A shared quote. The quote itself is in the fragment." },
+          { "/": "/q/", "comment": "The same, with a trailing slash." }
+        ]
+      }
+    ]
+  }
+}
