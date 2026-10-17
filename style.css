@@ -327,3 +327,23 @@ footer p {
 @media (max-width: 480px) {
   .shared-quote blockquote p { font-size: 1.4375rem; }
 }
+
+.open-in-cairn {
+  margin: -2.5rem auto 4rem;
+}
+
+.open-in-cairn .button {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--cream);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.open-in-cairn .muted {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}

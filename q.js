@@ -40,7 +40,9 @@
     var text = f.v === "1" ? clean(f.t, LIMITS.t, true) : null;
     var quote = document.getElementById("quote");
     var missing = document.getElementById("missing");
+    var open = document.getElementById("open");
     if (!text) {
+      open.hidden = true;
       document.getElementById("from").textContent = "A quote for you";
       quote.hidden = true;
       missing.hidden = false;
@@ -59,6 +61,9 @@
       sender ? sender + " shared a quote with you" : "A quote for you";
     missing.hidden = true;
     quote.hidden = false;
+    // The same fragment, handed to the app. Cairn checks it again.
+    document.getElementById("open-link").href = "cairn://q" + window.location.hash;
+    open.hidden = false;
   }
 
   document.addEventListener("DOMContentLoaded", show);
