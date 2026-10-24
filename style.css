@@ -213,20 +213,13 @@ a.home-link:hover {
   letter-spacing: 0.02em;
 }
 
-/* A plain link to Cairn's App Store page (not a copy of Apple's badge). */
-.get-app {
-  display: inline-block;
-  padding: 0.75rem 1.75rem;
-  border-radius: 999px;
-  background: var(--text);
-  color: var(--cream);
-  font-weight: 600;
-  text-decoration: none;
-}
-
+/* Apple's official badge (Marketing Tools), black on light, white in dark.
+   Kept on this site so the pages make no outside requests. */
 .store img {
+  display: block;
   height: 3.25rem;
   width: auto;
+  margin: 0 auto;
 }
 
 /* Policy and support pages */
